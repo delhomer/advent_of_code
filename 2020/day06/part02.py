@@ -1,5 +1,5 @@
-INPUT_FILEPATH = "2020/day06/input"
-TEST_INPUT_FILEPATH = "2020/day06/test_input"
+"""Advent of code 2020, day06, part02
+"""
 
 ALPHABET = "".join(map(chr, range(ord("a"), ord("a") + 26)))
 
@@ -22,13 +22,19 @@ def sum_count_all(group, alphabet=ALPHABET):
     return sum(all(letter in item for item in group) for letter in alphabet)
 
 
+def run(input_filepath, expected_result=None):
+    groups = read_input(input_filepath)
+    count_sum = sum(sum_count_all(item) for item in groups)
+    print(
+        "Sum of 'yes' answer counts{}: {}".format(
+            "" if expected_result is None else " (test set)", count_sum
+        )
+    )
+    if expected_result is not None:
+        assert count_sum == expected_result
+
+
 if __name__ == "__main__":
 
-    test_groups = read_input(TEST_INPUT_FILEPATH)
-    test_count_sum = sum(sum_count_all(item) for item in test_groups)
-    print("Sum of 'yes' answer counts (test set): {}".format(test_count_sum))
-    assert test_count_sum == 6
-
-    groups = read_input(INPUT_FILEPATH)
-    count_sum = sum(sum_count_all(item) for item in groups)
-    print("Sum of 'yes' answer counts: {}".format(count_sum))
+    run("test_input", 6)
+    run("input")

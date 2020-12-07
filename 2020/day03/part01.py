@@ -1,9 +1,9 @@
-INPUT_FILEPATH = "2020/day03/input"
-
+"""Advent of code 2020, day03, part01
+"""
 
 if __name__ == "__main__":
 
-    with open(INPUT_FILEPATH, "r") as fobj:
+    with open("input", "r") as fobj:
         lines = fobj.readlines()
         tree_counter = 0
         marker = 0

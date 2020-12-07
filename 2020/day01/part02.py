@@ -1,5 +1,5 @@
-INPUT_FILE = "2020/day01/input"
-
+"""Advent of code 2020, day01, part02
+"""
 
 def find_2020_terms(items):
     for l1 in items:
@@ -11,7 +11,7 @@ def find_2020_terms(items):
 
 if __name__ == "__main__":
 
-    with open(INPUT_FILE, "r") as fobj:
+    with open("input", "r") as fobj:
 
         lines = fobj.readlines()
         l1, l2, l3, mult = find_2020_terms(lines)

@@ -1,13 +1,14 @@
+"""Advent of code 2020, day04, part02
+"""
+
 import re
 
-
-INPUT_FILEPATH = "2020/day04/input"
 
 REQUIRED_SECTIONS = ("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
 
 
 def read_input():
-    with open(INPUT_FILEPATH, "r") as fobj:
+    with open("input", "r") as fobj:
         return fobj.readlines()
 
 

@@ -1,5 +1,5 @@
-INPUT_FILEPATH = "2020/day03/input"
-
+"""Advent of code 2020, day03, part02
+"""
 
 def toboggan(lines, right, down):
     tree_counter = 0
@@ -14,7 +14,7 @@ def toboggan(lines, right, down):
 
 if __name__ == "__main__":
 
-    with open(INPUT_FILEPATH, "r") as fobj:
+    with open("input", "r") as fobj:
         lines = fobj.readlines()
         slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
         res = 1

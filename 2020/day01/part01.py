@@ -1,9 +1,9 @@
-INPUT_FILE = "2020/day01/input"
-
+"""Advent of code 2020, day01, part01
+"""
 
 if __name__ == "__main__":
 
-    with open(INPUT_FILE, "r") as fobj:
+    with open("input", "r") as fobj:
 
         lines = fobj.readlines()
         for l1 in lines:

@@ -1,8 +1,8 @@
-INPUT_FILEPATH = "2020/day05/input"
-
+"""Advent of code 2020, day05, part01
+"""
 
 def read_input():
-    with open(INPUT_FILEPATH, "r") as fobj:
+    with open("input", "r") as fobj:
         return fobj.readlines()
 
 

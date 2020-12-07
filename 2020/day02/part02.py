@@ -1,5 +1,5 @@
-INPUT_FILEPATH = "2020/day02/input"
-
+"""Advent of code 2020, day02, part02
+"""
 
 def is_valid(password, key, first_occurrence, last_occurrence):
     assert 1 <= first_occurrence <= len(password)
@@ -9,7 +9,7 @@ def is_valid(password, key, first_occurrence, last_occurrence):
 
 if __name__ == "__main__":
 
-    with open(INPUT_FILEPATH, "r") as fobj:
+    with open("input", "r") as fobj:
         lines = fobj.readlines()
         valid_counter = 0
         for line in lines:
