@@ -8,15 +8,14 @@ def read_input(filepath):
         return {idx: int(l) for idx, l in enumerate(fobj.readline().split(",")) if l != "x"}
 
 
-def solve(a, i, start, step):
-    """Bezout-like solver, that returns the value of following equation, by kind of iterating of x:
+def solve(a, i, t, step):
+    """Bezout-like solver, that returns the value of following equation, by kind of iterating over x in order to find t:
 
     ```
-    t = start + step * x = a * y - i
+    t + step * x = a * y - i
     ```
 
     """
-    t = start
     while(True):
         if (t + i) % a == 0:
             return t
