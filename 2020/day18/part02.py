@@ -20,7 +20,6 @@ def evaluate_without_parenthesis(expression):
         b = figures.pop(idx)
         figures.insert(idx, a + b)
         ops.pop(idx)
-        # print(figures, ops)
     res = 1
     for f in figures:
         res *= f
